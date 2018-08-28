@@ -4,7 +4,6 @@ namespace App\DataFixtures;
 
 use App\Entity\League;
 use App\Entity\Team;
-use App\Service\LeagueService;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 

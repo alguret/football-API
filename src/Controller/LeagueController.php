@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\League;
 use App\Exception\ValidationException;
 use App\Service\LeagueService;
 use App\Service\TeamService;

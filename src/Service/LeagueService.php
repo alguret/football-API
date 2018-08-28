@@ -5,11 +5,6 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Entity\League;
-use App\Entity\Team;
-use App\Exception\ValidationException;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityNotFoundException;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
@@ -27,6 +22,7 @@ class LeagueService
 
     /**
      * @param int $id
+     * @return League
      * @throws EntityNotFoundException
      */
     public function deleteLeagueById(int $id): League

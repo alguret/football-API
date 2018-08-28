@@ -2,11 +2,9 @@
 
 namespace App\Service;
 
-use App\Entity\League;
 use App\Entity\Team;
 use App\Exception\ValidationException;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityNotFoundException;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
@@ -62,7 +60,7 @@ class TeamService
     {
         $repository = $this->em->getRepository(Team::class);
 
-        /** @var League $leagueEntity */
+        /** @var Team $teamEntity */
         $teamEntity = $repository->find($teamId);
         if (!$teamEntity) {
             throw new EntityNotFoundException('Team does not exist');
@@ -85,7 +83,7 @@ class TeamService
 
     /**
      * @param int $leagueId
-     * @return array
+     * @return Collection
      * @throws EntityNotFoundException
      */
     public function getTeamsByLeagueId(int $leagueId): Collection

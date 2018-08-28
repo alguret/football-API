@@ -7,7 +7,7 @@ openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
 
 ## Get started
 1. Create database - `php bin/console doctrine:database:create`
-2. Apply migrations - `php bin/consol doctrine:migrations:migrate`
+2. Apply migrations - `php bin/console doctrine:migrations:migrate`
 3. Fill database with test data - `php bin/console doctrine:fixtures:load`
 4. Start HTTP development server - `php bin/console server:run`
 
